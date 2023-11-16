@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let solveAuto = document.getElementById('solveAuto');
+    //let solveAuto = document.getElementById('solveAuto');
     let solveAll = document.getElementById('solveAll');
     let solveAnimations = document.getElementById('solveAnimations');
     let solveMC = document.getElementById('solveMC');
     let solveSA = document.getElementById('solveSA');
     let solveDD = document.getElementById('solveDD');
 
-    solveAuto.addEventListener('click', function () {
-        chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
-            chrome.tabs.sendMessage(tabs[0].id, {"message": "solveAuto"});
-        });
-    });
+    //solveAuto.addEventListener('click', function () {
+    //    chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
+    //        chrome.tabs.sendMessage(tabs[0].id, {"message": "solveAuto"});
+    //    });
+    //});
 
     solveAll.addEventListener('click', function () {
         chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
