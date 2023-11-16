@@ -2,6 +2,7 @@ function solveAll() {
     solveAnimations();
     solveMultipleChoice();
     solveShortAnswer();
+    // Drag and Drop here
 }
 
 function nextPage() {
@@ -52,17 +53,30 @@ function solveAnimations() {
     }, 1500);
 }
 
+//  // Prath's version
+//function solveMultipleChoice() {
+//    let i = 0;
+//    let mc = document.querySelectorAll('input[type=radio]');
+//    setInterval(() => {
+//        if (i < mc.length) {
+//            mc[i].click();
+//            i++;
+//        }
+//    }, 300);
+//}
+//
+//  // Charles Young's version
+//function solveMultipleChoice() {
+//    for (const radio of document.querySelectorAll('input[type=radio]'))
+//        radio.click()
+//}
+
 function solveMultipleChoice() {
-    let i = 0;
-    let mc = document.querySelectorAll('input[type=radio]');
-    setInterval(() => {
-        if (i < mc.length) {
-            mc[i].click();
-            i++;
-        }
-    }, 300);
+    for (const radio of document.querySelectorAll('input[type=radio]'))
+        radio.click()
 }
 
+    // Prath's version
 function solveShortAnswer() {
     console.log(document.getElementsByClassName('show-answer-button'));
     for (const answerBtn of document.getElementsByClassName('show-answer-button')) {
@@ -91,6 +105,30 @@ function solveShortAnswer() {
     }, 1000);
 }
 
+    //Charles Young's version
+//function solveShortAnswer() {
+//    for (const answerBtn of document.getElementsByClassName('show-answer-button')) {
+//        answerBtn.click();
+//        answerBtn.click();
+//    }
+//
+//    let answers = document.getElementsByClassName('forfeit-answer');
+//    let answerBoxes = document.getElementsByClassName('zb-text-area');
+//
+//    for (let i = 0; i < answers.length; i++) {
+//        answerBoxes[i].focus();
+//        answerBoxes[i].select();
+//        answerBoxes[i].value = answers[i].innerHTML;
+//    }
+//
+//    // tried simulating keystrokes and mouse clicks but it still doesn't register the answer until the user clicks on the box :/
+//
+//    for (const checkBtn of document.getElementsByClassName('check-button')) {
+//        checkBtn.click();
+//        checkBtn.click();
+//    }
+//}
+
 chrome.runtime.onMessage.addListener(
     function (request, sender, sendResponse) {
         switch (request.message) {
@@ -115,6 +153,9 @@ chrome.runtime.onMessage.addListener(
                 break;
             case "solveSA":
                 solveShortAnswer();
+                break;
+            case "solveDD":
+                //Drag and Drop here
                 break;
             default:
                 console.log("Unknown message: " + request.message);

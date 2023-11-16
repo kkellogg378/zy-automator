@@ -4,7 +4,7 @@ Simple Chrome Extension to complete ZyBooks participation assignments.
 
 Forked from [charles-young/zy-automator](https://github.com/charles-young/zy-automator)
 
-With update from [ZyBooks Auto](https://chromewebstore.google.com/detail/zybooks-auto/bjkbhcempihbcacfghfmcmabfhehoiao)
+With update from Prath's [ZyBooks Auto](https://chromewebstore.google.com/detail/zybooks-auto/bjkbhcempihbcacfghfmcmabfhehoiao)
 
 Modules:
 * Animations (Working)
