@@ -1,8 +1,11 @@
-# ZYBooks Automator
+# ZyBooks Automator
 
-Simple Chrome Extension to complete ZYBooks participation assignments.
+Simple Chrome Extension to complete ZyBooks participation assignments.
 
-Working:
-* Animations autoplay
+Working Modules:
+* Animations
 * Multiple choice
-* Short answer filling (user has to click the box for ZYBooks to grade it)
+* Short answer **NEW!**
+
+Not Working:
+* Drag and drop modules

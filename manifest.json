@@ -1,11 +1,11 @@
 {
-  "manifest_version": 2,
-  "name": "zy-automator",
-  "version": "0.1",
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 3,
+  "name": "ZyBooks Auto",
+  "version": "1.0",
   "background": {
-    "scripts": [
-      "background.js"
-    ]
+    "service_worker": "background.js"
   },
   "content_scripts": [
     {
@@ -17,7 +17,10 @@
       ]
     }
   ],
-  "browser_action": {
+  "action": {
     "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "icon.png"
   }
 }
