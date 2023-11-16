@@ -2,10 +2,13 @@
 
 Simple Chrome Extension to complete ZyBooks participation assignments.
 
-Working Modules:
-* Animations
-* Multiple choice
-* Short answer **NEW!**
+Forked from [charles-young/zy-automator](https://github.com/charles-young/zy-automator)
+With update from [ZyBooks Auto](https://chromewebstore.google.com/detail/zybooks-auto/bjkbhcempihbcacfghfmcmabfhehoiao)
+
+Modules:
+* Animations (Working)
+* Multiple choice (Broken, just iterates through all of the answers)
+* Short answer (Working)
 
 Not Working:
 * Drag and drop modules

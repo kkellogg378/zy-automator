@@ -1,8 +1,8 @@
 {
-"update_url": "https://clients2.google.com/service/update2/crx",
+"update_url": "https://clients2.google.com/service/update2/crx", 
 
   "manifest_version": 3,
-  "name": "ZyBooks Auto",
+  "name": "zyBooks Automator",
   "version": "1.0",
   "background": {
     "service_worker": "background.js"
