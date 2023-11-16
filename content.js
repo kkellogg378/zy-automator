@@ -1,3 +1,7 @@
+//function sleep(ms) {
+//    return new Promise(resolve => setTimeout(resolve, ms));
+//}
+
 function solveAll() {
     solveAnimations();
     solveMultipleChoice();
@@ -71,10 +75,50 @@ function solveAnimations() {
 //        radio.click()
 //}
 
+    // My version
 function solveMultipleChoice() {
-    for (const radio of document.querySelectorAll('input[type=radio]'))
-        radio.click()
+    let mc = document.querySelectorAll('input[type=radio]');
+    let i = 0;
+    
+    function checkAnswer() {
+        // Get the current question text
+        let currentQuestion = mc[i].closest('.question').innerText.trim();
+        let questionNum = mc[i].closest('.question').querySelector('.setup .label').innerText.trim();
+    
+        // Get the explanation div for the current question
+        let explanationDiv = mc[i].closest('.question').nextElementSibling;
+    
+        // Check if the explanation div contains the class 'correct' or 'incorrect'
+        if (explanationDiv.classList.contains('correct')) {
+            console.log(`Answer for "${questionNum}" is correct.`);
+            // Do something when the answer is correct
+            
+            i--; // I was running into an issue where it would select the answer after the correct answer
+            mc[i].click();
+            i++;
+            
+            // Move to the next question with the same name
+            while (i < mc.length && mc[i].closest('.question').innerText.trim() === currentQuestion) {
+                i++;
+            }
+        } else if (!explanationDiv.classList.contains('correct')) {
+            console.log(`Answer for "${questionNum}" is incorrect.`);
+            // Do something when the answer is incorrect
+    
+            // Move to the next question with the same name
+            i++;
+        }
+    }
+    
+    setInterval(() => {
+        if (i < mc.length) {
+            mc[i].click();
+            checkAnswer();
+        }
+    }, 300);
 }
+
+
 
     // Prath's version
 function solveShortAnswer() {

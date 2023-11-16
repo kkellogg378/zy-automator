@@ -8,8 +8,6 @@ With update from Prath's [ZyBooks Auto](https://chromewebstore.google.com/detail
 
 Modules:
 * Animations (Working)
-* Multiple choice (Broken, just iterates through all of the answers)
+* Multiple choice (Working)
 * Short answer (Working)
-
-Not Working:
-* Drag and drop modules
+* Drag and drop modules (Not yet implemented)
